@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Meta Tags</title>
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>
+            HTML Meta Tags: <br> Entendendo o uso de Meta Tags
+        </h1>
+        <p>Com o avanço das tecnologias voltadas para a Web, é essencial e indispensável que um bom profissional conheça
+            conceitos básicos sobre a estruturação do HTML, e neste artigo explicaremos como funcionam as Meta Tags.</p>
+        <h3>Meta Tags</h3>
+        <p>As Meta Tags auxiliam os mecanismos de busca (search engines) a encontrarem o seu site na web, isso porque
+            são elas que dão um pequeno resumo sobre o que será encontrado na sua página, sendo assim uma forma de
+            indexar o conteúdo web disponível, mas essas tags não se resumem apenas a melhoria para mecanismos de busca,
+            veremos que existem Meta Tags com funções mais complexas e com funções que podem ajudar muito em momentos
+            oportunos.</p>
+        <p>As meta tags devem estar entre as tags <b>&lt;head&gt;&lt;/head&gt;</b>, mesmo local onde fica a tag
+            <b>&lt;title&gt;&lt;/title&gt;</b>. Veja a <b>Código 1.</b>
+        </p>
+       
+            <h4>&lt;!DOCTYPE html&gt; <br>
+            &lt;html&gt;<br>
+            
+            &lt;head&gt;<br>
+            &lt;title> Aprendendo sobre as meta tags &lt;/title&gt;<br>
+            &lt;meta name="author" content="Ronaldo Lanhellas"&gt;<br>
+            &lt;meta name="description" content="Meta Tags na Devmedia"&gt;<br>
+            &lt;meta name="keywords" content="sites, web, desenvolvimento"&gt;<br>
+            &lt;/head&gt;<br></h4>
+       
+
+        <p>Mas fique atento, as meta tags sozinhas não fazem milagres. <br> Não significa que por ter as Meta Tags com o
+            conteúdo certo e no local certo, que seu site será indexado pelos mecanismos de busca, isso porque cada vez
+            mais estes mecanismos consideram o conteúdo do site como um tudo, realizando uma análise mais profunda sobre
+            a validade do mesmo.</p>
+        <p>O Google, por exemplo, programou o seu robô de busca para ignorar as Meta tags devido a grande quantidade de
+            “metatag spamming” encontrado na rede, sendo assim o próprio conteúdo da sua página é indexado no banco de
+            dados ao invés da meta
+            tag “description”.</p>
+        <p>Dê prioridade as palavras-chaves mais importantes ao usar a meta tag “keywords”, isso porque a maioria dos
+            mecanismos de buscas leem apenas o início desta tag, então dê prioridade para colocar as palavras-chaves
+            mais importantes logo no início.</p>
+        <h2>Tipos de Meta Tags</h2>
+        <ul type="square">
+            <li><b>HTTP-EQUIV:</b> O atributo HTTP-EQUIV serve para controlar as ações do browser e também especificam
+                melhor as informações, sendo que estas tem efeito equivalente quando são utilizadas diretamente na tag
+                HTTP do cabeçalho.</li>
+            <li><b>NAME:</b> Meta tags com o atributo “name” são utilizadas quando os tipos não correspondem com o HTTP,
+                ou seja, aquilo que
+                não se adequar ao HTTP-EQUIV é utilizado no NAME. Mas alguns buscadores não chegam a fazer distinção
+                sobre esses tipos
+                de tags, por exemplo: A meta tag “keywords” pode ser utilizada tanto com o tipo “http-equiv” como o tipo
+                “name”.</li>
+            <li><b>DUBLIN CORE:</b> Com o aumento da complexidade e necessidade de customização de Meta Tags, foi
+                idealizado e criado uma
+                linguagem de meta tags própria, chamado de Dublin Core, que permite maior flexibilidade aos autores.
+                Neste artigo não
+                abordaremos detalhes do uso desta linguagem, mas vale a pena saber que existem outras alternativas ao
+                uso de Meta Tags.</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Atributos e Especificações</h2>
+        <p>Vimos na seção anterior quais os tipos de Meta Tags existentes e agora veremos que atributos podemos utilizar
+            junto a elas:</p>
+        <ul type="none">
+            <li><b>AUTHOR:</b> Serve para identificar qual o nome do autor da página, geralmente o desenvolver ou a
+                empresa desenvolvedora.
+                Essa tag é utilizado com o tipo “name”, ou seja, você terá que definir como na <b>Código 2:</b>
+                name=”author”.</li>
+        </ul>
+      
+            <h4>&lt;meta name="author" content="Ronaldo Lanhellas" /&gt;</h4>
+        
+    </div>
+    <div>
+        <p><b>CACHE-CONTROL:</b> Essa tag é utilizada no com o tipo “http-equiv” e é reconhecida apenas pelo http 1.1, e
+            no seu atributo “content” (onde fica o conteúdo da tag) é permitido os seguintes valores:</p>
+        <ul type="square">
+            <li>Public: Os dados da página podem ser armazenados de forma compartilhada, isto é, será utilizado por
+                diferentes usuários
+                de um mesmo browser.</li>
+            <li>Private: É o contrário de public, o cache é armazenado para um específico usuário.</li>
+            <li>No-Cache: A página não é armazenada em Cache.</li>
+            <li>No-Store: É feito um cache temporário, a página não é arquivada.</li>
+        </ul>
+        <p>Como a tag cache-control é reconhecida apenas pelo HTTP 1.1, o uso do pragma:no-cache é importante caso
+            pretenda-se usar
+            o cache-control:no-cache, isso porque ambos tem o mesmo efeito mas não se sabe se o servidor é ou não
+            compatível com o HTTP 1.1, por isso o uso de ambos é importante. Observe a <b>Código 3.</b></p>
+        
+            <h4>&lt;meta http-equiv="cache-control"
+                content="no-cache" /&gt;</h4>
+        
+        <p><b>CONTENT-LANGUAGE:</b> Utilizado para declarar as linguagens utilizadas no conteúdo da página. Esse
+            atributo é útil para categorizar a página conforme o idioma. Este é utilizado em conjunto com o tipo
+            “http-equiv”. Observe a Código 4.</p>
+        
+            <h4>&lt;meta http-equiv="content-language" content="pt-br, en-US, fr" /&gt;</h4>
+        
+    </div>
+    <div>
+        <p><b>CONTENT-TYPE:</b> Esta tag é uma das mais importantes e jamais deve ser esquecida pois ela define qual o
+            tipo de conteúdo
+            que a página contém e qual a codificação deste conteúdo. Assim fica fácil saber se iremos abrir uma página
+            HTML ou um
+            arquivo PDF. Observe a <b>Código 5</b>.</p>
+        <br>
+        
+            <h4>&lt;meta http-equiv="content-type"
+                content="text/html; charset=UTF-8" /&gt;</h4>
+        
+    </div>
+</body>
+
+</html>
