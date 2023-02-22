@@ -26,17 +26,17 @@
         <p>As meta tags devem estar entre as tags <b>&lt;head&gt;&lt;/head&gt;</b>, mesmo local onde fica a tag
             <b>&lt;title&gt;&lt;/title&gt;</b>. Veja a <b>Código 1.</b>
         </p>
-       
-            <h4>&lt;!DOCTYPE html&gt; <br>
+
+        <h4>&lt;!DOCTYPE html&gt; <br>
             &lt;html&gt;<br>
-            
+
             &lt;head&gt;<br>
             &lt;title> Aprendendo sobre as meta tags &lt;/title&gt;<br>
             &lt;meta name="author" content="Ronaldo Lanhellas"&gt;<br>
             &lt;meta name="description" content="Meta Tags na Devmedia"&gt;<br>
             &lt;meta name="keywords" content="sites, web, desenvolvimento"&gt;<br>
             &lt;/head&gt;<br></h4>
-       
+
 
         <p>Mas fique atento, as meta tags sozinhas não fazem milagres. <br> Não significa que por ter as Meta Tags com o
             conteúdo certo e no local certo, que seu site será indexado pelos mecanismos de busca, isso porque cada vez
@@ -78,9 +78,9 @@
                 Essa tag é utilizado com o tipo “name”, ou seja, você terá que definir como na <b>Código 2:</b>
                 name=”author”.</li>
         </ul>
-      
-            <h4>&lt;meta name="author" content="Ronaldo Lanhellas" /&gt;</h4>
-        
+
+        <h4>&lt;meta name="author" content="Ronaldo Lanhellas" /&gt;</h4>
+
     </div>
     <div>
         <p><b>CACHE-CONTROL:</b> Essa tag é utilizada no com o tipo “http-equiv” e é reconhecida apenas pelo http 1.1, e
@@ -97,16 +97,15 @@
             pretenda-se usar
             o cache-control:no-cache, isso porque ambos tem o mesmo efeito mas não se sabe se o servidor é ou não
             compatível com o HTTP 1.1, por isso o uso de ambos é importante. Observe a <b>Código 3.</b></p>
-        
-            <h4>&lt;meta http-equiv="cache-control"
-                content="no-cache" /&gt;</h4>
-        
+
+        <h4>&lt;meta http-equiv="cache-control"
+            content="no-cache" /&gt;</h4>
+
         <p><b>CONTENT-LANGUAGE:</b> Utilizado para declarar as linguagens utilizadas no conteúdo da página. Esse
             atributo é útil para categorizar a página conforme o idioma. Este é utilizado em conjunto com o tipo
-            “http-equiv”. Observe a Código 4.</p>
-        
-            <h4>&lt;meta http-equiv="content-language" content="pt-br, en-US, fr" /&gt;</h4>
-        
+            “http-equiv”. Observe a <b>Código 4.</b></p>
+
+        <h4>&lt;meta http-equiv="content-language" content="pt-br, en-US, fr" /&gt;</h4>
     </div>
     <div>
         <p><b>CONTENT-TYPE:</b> Esta tag é uma das mais importantes e jamais deve ser esquecida pois ela define qual o
@@ -114,12 +113,83 @@
             que a página contém e qual a codificação deste conteúdo. Assim fica fácil saber se iremos abrir uma página
             HTML ou um
             arquivo PDF. Observe a <b>Código 5</b>.</p>
-        <br>
-        
-            <h4>&lt;meta http-equiv="content-type"
-                content="text/html; charset=UTF-8" /&gt;</h4>
-        
+        <h4>&lt;meta http-equiv="content-type"
+            content="text/html; charset=UTF-8" /&gt;</h4>
     </div>
+    <div>
+        <p><b>COPYRIGHT:</b> Como o próprio nome já sugere, este serve para declarar os direitos autorais da página em questão. Observe a
+        <b>Código 6</b>.</p>
+        <h4>&lt;meta name="copyright" content="© 2023 DevMedia" /&gt;</h4>
+        <p><b>DESCRIPTION:</b> Contém uma descrição/resumo sobre a página, utilizada por alguns mecanismos de busca, conforme a <b>Código 7</b>.</p>
+        <h4>&lt;meta name="description" content="Artigo da Devmedia sobre Meta Tags” /&gt;
+</h4>
+<p><b>EXPIRES:</b> A data e a hora depois dos quais o documento deve ser considerado como expirado. Uma data ilegal como, por
+exemplo "0" é considerada como "agora". Configurar "Expires" como "0" pode também ser usado para forçar uma nova
+checagem a cada visita do robô de busca. Observe um exemplo na <b>Código 8.</b></p>
+<h4>&lt;meta http-equiv="expires" content="Mon, 22 jul 2006 11:12:01 GMT" /&gt;
+</h4>
+<p><b>KEYWORDS:</b> As palavras-chaves são utilizadas para ajudar na indexação da sua página pelos motores de busca, funcionam
+como uma categorização do conteúdo, conforme a <b>Código 9</b>.</p>
+<h4>&lt;meta name="keywords" content="devmedia, artigo, metatag, html"&gt;
+</h4>
+<p><b>PRAGMA:NO-CACHE:</b> Esse atributo faz com que o navegador não armazene a página em cache. A diferença deste para o
+cache-control:no-cache é que ele serve para todas as versões do HTTP. Observe a <b>Código 10</b>.</p>
+<h4>&lt;meta http-equiv="pragma" content="no-cache" /&gt;
+</h4>
+    </div>
+    <div>
+        <p><b>REFRESH:</b> Especifica o tempo em segundos para que o browser atualize a página de forma automática, pode-se também
+        redirecionar para uma outra URL após esse tempo. Veja a <b>Código 11</b>.</p>
+        <h4>&lt;meta http-equiv="refresh" content="15;url=http://www.thechessman.org" /&gt;
+</h4>
+    </div>
+    <div></div>
+    <p><b>ROBOTS:</b> Especifica informações para que o robô possa indexar sua página, suporta os seguintes valores:</p>
+    <ul type="square">
+        <li><b>All:</b> Valor default, significa vazio, o robô de busca não recebe nenhuma informação.</li>
+        <li><b>Index:</b> Os robôs de busca podem incluir a página normalmente.</li>
+        <li><b>Follow:</b> Robôs podem indexar a página e ainda seguir os links para outras páginas que ela contém.</li>
+        <li><b>NoIndex:</b> Os links podem ser seguidos, mas a página não é indexada.
+</li>
+        <li><b>NoFollow:</b> A página é indexada, mas os links não são seguidos.</li>
+        <li><b>None:</b> Os robôs podem ignorar a página.
+</li>
+        <li><b>NoArchive (Apenas Google):</b> A página não é arquivada.
+</li>
+</ul>
+<p>Veja um exemplo no <b>Código 12</b>.</p>
+<h4>
+    &lt;meta name="robots" content="all"&gt; <br><br>
+
+&lt;meta name="robots" content="index,nofollow"&gt; <br><br>
+
+&lt;meta name="robots" content="noindex,follow"&gt; <br><br>
+
+&lt;meta name="robots" content="none"&gt;</h4>
+</div>
+<div>
+    <p><b>GOOGLEBOT:</b> é uma forma de comunicação direta com o robô do Google, dizendo ao mesmo que você não quer que ele index a sua página, ou seja, ela não será mostrada nas pesquisas. Mas lembre-se que isso não impede que os outros mecanismos de buscas indexem sua página. Observe a <b>Código 13</b>.</p>
+    <h4>&lt;meta name="googlebot" content="noarchive"&gt;</h4>
+    <p><b>GENERATOR:</b> Indica qual software foi utilizado para realizar a criação dessa página. Veja um exemplo na <b>Código 15</b>.</p>
+    <h4>&lt;meta name="generator" content="Dreamweaver 8" /&gt;</h4>
+    <p><b>REVISIT-AFTER:</b> Utilizado para comunicar-se com os servidores de proxy afim de dizer de quanto em quanto tempo a página
+    deve ser revisitada para refazer o cache. Observe a <b>Código 16</b>.</p>
+    <h4>&lt;meta name="revisit-after" content="15 days" /&lt;</h4>
+</div>
+<div>
+    <p><b>RATING:</b> Essa tag é útil para identificar a censura apropriada da página, ex: A página é inapropriada para menores de 18
+    anos por conter conteúdo erótico. Veja os valores suportados:</p>
+    <br>
+    <ul type="square">
+        <li>General: Para qualquer idade</li>
+        <li>14 years: Censura 14 anos</li>
+        <li>Mature: Para pessoas acima de 18 anos
+</li>
+    </ul>
+    <p>Observe um exemplo na <b>Código 17</b>.</p>
+    <h4>&lt;meta name="rating" content="general" /&gt;
+</h4>
+</div>
 </body>
 
 </html>
